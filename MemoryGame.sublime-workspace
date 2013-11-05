@@ -1,0 +1,305 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ball",
+				"BallCenter"
+			],
+			[
+				"Memo",
+				"MemoryGame"
+			],
+			[
+				"ti",
+				"timer"
+			],
+			[
+				"circl",
+				"circle_"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"colo",
+				"colorGallery"
+			],
+			[
+				"fill",
+				"fill-opacity"
+			],
+			[
+				"eff",
+				"effectsGallery"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "dev/scss/memory-game.scss",
+			"settings":
+			{
+				"buffer_size": 1071,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "web/build/_ui/css/memory-game.min.css",
+			"settings":
+			{
+				"buffer_size": 1268,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 35.0,
+		"selected_items":
+		[
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/web/build/_ui/memory-game.html",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/core/MemoryCore.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/view/BallCenter.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/core/UserRewardRoom.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/utility/utility.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/Main.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/Gruntfile.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/core/UserRewardRoom",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/Model.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/View.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/utility/svg_library.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/assets/ball.svg",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/assets/shine.svg",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/assets/68034BFB.png",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/web/build/_ui/icons/preview.html",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/web/build/_ui/icons/icons.fallback.css",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/web/build/_ui/js/MemoryGame.min.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/node_modules/grunt-webfont/Gruntfile.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/package.json",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/scss/assets/ball.svg",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/scss/memory-game.scss",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/wk/drop.html",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/wk/circle.svg",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/core/memory_core.js",
+		"/C/popSVN/projects_files/practice/javascript/MemoryGame/dev/src/core/memory_core"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"while",
+			"circleClass",
+			");\n",
+			")')"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "dev/scss/memory-game.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								546,
+								551
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "web/build/_ui/css/memory-game.min.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.707075491569,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "MemoryGame.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

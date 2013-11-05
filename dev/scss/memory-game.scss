@@ -1,0 +1,109 @@
+div#game {
+	position:relative;
+	padding:0;
+	margin:0;
+	
+	width:987px;
+	height:570px;
+
+	border:1px solid #CCCCCC;
+
+	#background {
+	
+		position:absolute;
+
+		top: 67px;
+		left: 47px;
+
+		width:897px;
+		height:386px;
+
+		border:1px solid #CCCCCC;
+	}
+
+	#ballArea {
+	
+		position:absolute;
+
+		top: 108px;
+		left: 208px;
+
+		width:347px;
+		height:267px;
+
+		padding:15px 0 0 7px; 
+
+		border:1px solid #CCCCCC;
+
+		.circle-btn {
+			cursor:hand; 
+			cursor:pointer;
+			
+			circle.border {
+				fill:#E0E0E0;
+			}
+
+			circle.bHover {
+				fill:#7A8B8B;
+			}
+
+			circle.bPress {
+				fill:#A62A2A;
+			}
+
+			circle.selected {
+				fill:#000000;
+			}
+			
+		}
+	}
+
+	#historyArea {
+	
+		position:absolute;
+
+		top: 108px;
+		left: 568px;
+
+		width:234px;
+		height:282px;
+
+		border:1px solid #CCCCCC;
+	}
+
+	#trophiesCenter {
+	
+		position:absolute;
+
+		top: 108px;
+		left: 62px;
+
+		width:140px;
+		height:282px;
+
+		border:1px solid #CCCCCC;
+	}
+
+	#rewardroom {
+
+		position:absolute;
+
+		top: 10px;
+		left: 10px;
+
+		width:600px;
+		height:40px;
+
+		display:block;
+
+		//
+		h1.userWin {
+			background-color:#00EACD;
+		}
+		h1.userFail {
+			background-color:#CC3300;
+		}
+
+	}
+
+}

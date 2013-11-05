@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Memory Game - JS </title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/resetHTML5.css">
+  <link rel="stylesheet" type="text/css" href="css/memory-game.min.css">
+  <!--link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'-->
+  <!-- font-family: 'Aladin', cursive; -->
+
+  <!-- JS -->
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/MemoryGame.min.js"></script>
+  <script type="text/javascript">
+     
+    // MemoryGame
+    function init_memorygame (){ 
+
+      /* areas */
+      MemoryGame.configuration ({
+
+          /* areas */
+          ballAreaId:'ballArea',
+          historyAreaId:'historyArea',
+          rewardroomId:'rewardroom'
+      });
+    }
+
+    // temp
+    function con (){
+ 
+    }
+
+    $(function(){
+      init_memorygame();
+    })
+
+  </script>
+</head>
+<body>
+  <!-- CONTENT -->
+  <div id="game">
+    <div id="background">background</div>
+    <div id="trophiesCenter">trophies Center - <a onclick="con()" href="#">continue</a></div>
+    <div id="ballArea"></div>
+    <div id="historyArea">game History</div>
+
+    <!-- HTML internaly defined -->
+    <div id="rewardroom"><h1 id="msg">msg</h1></div>
+  </div>
+</body>
+</html>

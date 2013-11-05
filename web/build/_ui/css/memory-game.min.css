@@ -1,0 +1,58 @@
+div#game {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 987px;
+  height: 570px;
+  border: 1px solid #CCCCCC; }
+  div#game #background {
+    position: absolute;
+    top: 67px;
+    left: 47px;
+    width: 897px;
+    height: 386px;
+    border: 1px solid #CCCCCC; }
+  div#game #ballArea {
+    position: absolute;
+    top: 108px;
+    left: 208px;
+    width: 347px;
+    height: 267px;
+    padding: 15px 0 0 7px;
+    border: 1px solid #CCCCCC; }
+    div#game #ballArea .circle-btn {
+      cursor: hand;
+      cursor: pointer; }
+      div#game #ballArea .circle-btn circle.border {
+        fill: #E0E0E0; }
+      div#game #ballArea .circle-btn circle.bHover {
+        fill: #7A8B8B; }
+      div#game #ballArea .circle-btn circle.bPress {
+        fill: #A62A2A; }
+      div#game #ballArea .circle-btn circle.selected {
+        fill: #000000; }
+  div#game #historyArea {
+    position: absolute;
+    top: 108px;
+    left: 568px;
+    width: 234px;
+    height: 282px;
+    border: 1px solid #CCCCCC; }
+  div#game #trophiesCenter {
+    position: absolute;
+    top: 108px;
+    left: 62px;
+    width: 140px;
+    height: 282px;
+    border: 1px solid #CCCCCC; }
+  div#game #rewardroom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 600px;
+    height: 40px;
+    display: block; }
+    div#game #rewardroom h1.userWin {
+      background-color: #00EACD; }
+    div#game #rewardroom h1.userFail {
+      background-color: #CC3300; }
