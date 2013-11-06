@@ -127,6 +127,24 @@ SVG.drawCircle = function ($cicleID, $params) {
 			return node;
 		})();
 
+		// hit area
+		var hitPropertys = {
+			fill:"#CCCCCC",
+			r:29,
+			cx:"0",
+			cy:"0",
+			style:"fill-opacity:0.0",
+			class:"hitArea"
+		};
+		var hitArea = (function(){
+			var node = document.createElementNS(SVG.xmlns,'circle');
+			var key;
+			for (key in hitPropertys) {
+				node.setAttributeNS(null, key, hitPropertys[key]);
+			}
+			return node;
+		})();
+
 		/*
 		@circle effect
 		This doesn't work for Safari and IE8--
@@ -139,7 +157,7 @@ SVG.drawCircle = function ($cicleID, $params) {
 		g.appendChild (border);
 		g.appendChild (circle);
 		g.appendChild (shine);
-		//g.appendChild (rect);
+		g.appendChild (hitArea);
 
 		return g;
 	}

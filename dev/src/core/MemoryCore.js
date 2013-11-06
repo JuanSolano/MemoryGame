@@ -3,11 +3,11 @@ function MemoryCore () {
 	/*
 	* Collecting info
 	*/
-	var gameConfigInfo = MODEL.gameConfiguration;
+	var gameConfigInfo = MemoryGame.MODEL.gameConfiguration;
 	var gameNode = document.getElementById (gameConfigInfo.ballAreaId);
-	var ballCenter = MODEL.view.ballCenter.ball_arr;
+	var ballCenter = MemoryGame.MODEL.view.ballCenter.ball_arr;
 	var ballCenterLen = ballCenter.length;
-	var interface = MODEL.view.ballCenter.interface;
+	var interface = MemoryGame.MODEL.view.ballCenter.interface;
 	var rewardRoom = new UserRewardRoom ();
 
 	/*
@@ -118,7 +118,7 @@ function MemoryCore () {
 	};
 
 	/**/
-	MODEL.core.pingItem = pingItem;
+	MemoryGame.MODEL.core.pingItem = pingItem;
 
 	/*****************************************************************************************/
 	/*
@@ -177,7 +177,7 @@ function MemoryCore () {
 	}
 
 	/**/
-	MODEL.core.compareSelection = compareSelection;
+	MemoryGame.MODEL.core.compareSelection = compareSelection;
 
 	/*****************************************************************************************/
 	this.startGame = function  () {

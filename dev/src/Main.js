@@ -1,6 +1,8 @@
-var MemoryGame = (function (){
+var MemoryGame = MemoryGame || {};
+//******
+(function (){
 
-	var debugmode = false;
+	var debugmode = true;
 
 	/* DEFAULT game configuration */
 	var defaultGameConfiguration = {
@@ -15,15 +17,12 @@ var MemoryGame = (function (){
 		circleStrokeColor:'#CCCCCC',
 		startLevel:0
 	};
-	function configuration ($userConfiguration) {
-		
+
+
+	function init ($userConfiguration) {
+
+		/* mersh default game mode with user mode info */
 		UTILITY.mergeOb(defaultGameConfiguration, $userConfiguration);
-
-		init ();
-	}
-
-
-	function init () {
 
 		/****************************************************/
 		/*	MODEL
@@ -31,8 +30,8 @@ var MemoryGame = (function (){
 		*	=gameConfiguration
 		*
 		*/	
-		MODEL.gameConfiguration = defaultGameConfiguration;
-
+		//
+		MemoryGame.MODEL.gameConfiguration = defaultGameConfiguration;
 		/****************************************************/
 		/* VIEW
 		* @sections
@@ -49,21 +48,15 @@ var MemoryGame = (function (){
 
 	}
 
-	return {
-		/* USER access code
-			=configuration:
-
-		 */
-		configuration:configuration,
-		tempContinue:function (){
-
-			MODEL.core.pingItem.pausePing ();
-
-		}
+	// 
+	MemoryGame.gameSetup = {
+		// game init
+		init:init
 	};
+
 })();
 
-window.MemoryGame = MemoryGame;
+
  /*
 * jQuery loader:
 * Check if any jQuery version is loaded, if don't, this code will load an jQuery version

@@ -4,6 +4,7 @@ function Ball (id_) {
 	this.ob = SVG.drawCircle ('circle_'+id_,{ /* No config settings */ });
 	this.border = this.ob.querySelectorAll('circle.border')[0];
 	this.circle = this.ob.querySelectorAll('circle.circle')[0];
+	this.hitArea = this.ob.querySelectorAll('circle.hitArea')[0];
 
 	// ITEMS HANDLERS
 	var self = this;
@@ -15,7 +16,7 @@ function Ball (id_) {
 			* userSelection ():
 			* register and send to compare the user item selection
 			*/
-			MODEL.core.compareSelection.userSelection (id_);
+			MemoryGame.MODEL.core.compareSelection.userSelection (id_);
 		},
 		overHandler:function (obj, evt){
 			UTILITY.addClass (self.border, 'bHover');
@@ -34,13 +35,13 @@ function Ball (id_) {
 	/* EVENT */
 	this.events = function (action_) {
 
-		UTILITY[action_] (this.circle, 'click', mouseEvents.click);
+		UTILITY[action_] (this.hitArea, 'click', mouseEvents.click);
 
-		UTILITY[action_] (this.circle, 'mousedown', mouseEvents.downHandler);
-		UTILITY[action_] (this.circle, 'mouseup', mouseEvents.upHandler);
+		UTILITY[action_] (this.hitArea, 'mousedown', mouseEvents.downHandler);
+		UTILITY[action_] (this.hitArea, 'mouseup', mouseEvents.upHandler);
 
-		UTILITY[action_] (this.circle, 'mouseover', mouseEvents.overHandler);
-		UTILITY[action_] (this.circle, 'mouseout', mouseEvents.outHandler);
+		UTILITY[action_] (this.hitArea, 'mouseover', mouseEvents.overHandler);
+		UTILITY[action_] (this.hitArea, 'mouseout', mouseEvents.outHandler);
 
 	}
 

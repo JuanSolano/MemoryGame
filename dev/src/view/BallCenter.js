@@ -3,7 +3,7 @@ function BallCenter () {
 	/*
 	* Collecting info
 	*/
-	var gameConfigInfo = MODEL.gameConfiguration;
+	var gameConfigInfo = MemoryGame.MODEL.gameConfiguration;
 	var gameNode = document.getElementById (gameConfigInfo.ballAreaId);
 	var ball_arr = [];
 	var svgGroup;
@@ -72,7 +72,7 @@ function BallCenter () {
 	};
 
 	/* register in to Model ALL the balls entry pointer  */
-	MODEL.view.ballCenter.ball_arr = ball_arr;
+	MemoryGame.MODEL.view.ballCenter.ball_arr = ball_arr;
 
 
 	/*************************************************************************************************/

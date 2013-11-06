@@ -1,4 +1,4 @@
-UTILITY = {};
+var UTILITY = {};
 UTILITY.mergeOb = function ($objectA, $objectB){
 	var key;
 	for (key in $objectB) {
@@ -29,7 +29,6 @@ UTILITY.shuffle = function (array) {
 UTILITY.addClass = function (obj, className){
 
  var hasValue =  (obj.getAttribute ('class') !== null)?obj.getAttribute ('class'):"";
-
   obj.setAttribute('class',  hasValue + " " + className);
 }
 UTILITY.removeClass = function (obj, className){

@@ -17,23 +17,21 @@
     // MemoryGame
     function init_memorygame (){ 
 
-      /* areas */
-      MemoryGame.configuration ({
+      /* external configuration */
+     configuration = {
 
-          /* areas */
+          /* game info areas */
           ballAreaId:'ballArea',
           historyAreaId:'historyArea',
           rewardroomId:'rewardroom'
-      });
+      };
+
+      MemoryGame.gameSetup.init(configuration); 
     }
 
-    // temp
-    function con (){
  
-    }
-
     $(function(){
-      init_memorygame();
+      init_memorygame ();
     })
 
   </script>

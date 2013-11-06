@@ -1,16 +1,18 @@
-MODEL = {};
-
+var MemoryGame = MemoryGame || {};
+//******
+MemoryGame.MODEL = {};
 /*
 * @gameConfiguration
 *	.gameConfiguration:
 *		.
 *		.
-*	.view:
-*		.
-*		.
 */
-MODEL.gameConfiguration = {};
-MODEL.view = {
+MemoryGame.MODEL.gameConfiguration = {};
+
+
+
+/********************************************************************* VIEW */
+MemoryGame.MODEL.view = {
 
 	
 	ballCenter:{
@@ -22,7 +24,9 @@ MODEL.view = {
 		ball_arr:[]
 	}
 };
-MODEL.core = {
+
+/********************************************************************* CORE */
+MemoryGame.MODEL.core = {
 	pingItem:{},
 	compareSelection:{}
 };

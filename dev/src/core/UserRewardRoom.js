@@ -1,6 +1,6 @@
 function UserRewardRoom () {
 
-	var gameConfigInfo = MODEL.gameConfiguration;
+	var gameConfigInfo = MemoryGame.MODEL.gameConfiguration;
 	var rewardroomNode = document.getElementById (gameConfigInfo.rewardroomId);
 	var msgNode = document.getElementById ('msg');
 	var userRewardStatus = "";

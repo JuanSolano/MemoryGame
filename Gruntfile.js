@@ -31,20 +31,21 @@ module.exports = function(grunt) {
 			web: {
 			  files: {
 				'web/build/_ui/js/MemoryGame.min.js':[
+
 														// utitlity
 														'dev/src/utility/utility.js',
 														'dev/src/utility/svg_library.js',
 
-														// core
-														'dev/src/core/*.js',
+														// Model
+														'dev/src/Model.js',
 
 														// View
 														'dev/src/view/Ball.js',
 														'dev/src/view/BallCenter.js',
 														'dev/src/View.js',
 
-														// Model
-														'dev/src/Model.js',
+														// core
+														'dev/src/core/*.js',
 
 														// init
 														'dev/src/Main.js'

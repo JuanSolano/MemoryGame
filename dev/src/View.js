@@ -17,6 +17,6 @@ function View () {
 	var ballView = new BallCenter ();
 
 	/**/
-	MODEL.view.ballCenter.interface = ballView;
+	MemoryGame.MODEL.view.ballCenter.interface = ballView;
 }
 
