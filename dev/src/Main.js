@@ -44,14 +44,26 @@ var MemoryGame = MemoryGame || {};
 		* comming from "core/MemoryCore.js"
 		*/
 		var memCore = new MemoryCore ();
-		memCore.startGame();
-
 	}
 
 	// 
 	MemoryGame.gameSetup = {
 		// game init
 		init:init
+	};
+
+	//
+		// 
+	MemoryGame.controls = {
+		startGame:function (){
+			memCore.startGame();
+		},
+		stopGame:function (){
+			 
+		},
+		pauseGame:function(){
+
+		}
 	};
 
 })();

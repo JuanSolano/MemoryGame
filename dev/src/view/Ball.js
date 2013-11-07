@@ -2,6 +2,9 @@ function Ball (id_) {
 	
 	this.id = id_;
 	this.ob = SVG.drawCircle ('circle_'+id_,{ /* No config settings */ });
+	this.enableBTN = false;
+
+	//***
 	this.border = this.ob.querySelectorAll('circle.border')[0];
 	this.circle = this.ob.querySelectorAll('circle.circle')[0];
 	this.hitArea = this.ob.querySelectorAll('circle.hitArea')[0];
@@ -9,26 +12,31 @@ function Ball (id_) {
 	// ITEMS HANDLERS
 	var self = this;
 	var mouseEvents = {
-		click:function (obj, evt){
-			
+		click:function (obj, evt){ /* no click action */ },
+		overHandler:function (obj, evt){
+			if(!self.enableBTN) { return }
+			UTILITY.addClass (self.border, 'bHover');
+		},
+		outHandler:function (obj, evt){
+			//if(!self.enableBTN) { return }
+			UTILITY.removeClass (self.border, 'bHover');
+			UTILITY.removeClass (self.border, 'bPress');
+		},
+		downHandler:function (obj, evt){
+			if(!self.enableBTN) { return }
+			UTILITY.addClass (self.border, 'bPress');
+		},
+		upHandler:function (obj, evt){
+			if(!self.enableBTN) { return }
+
+			UTILITY.removeClass (self.border, 'bPress');
+
 			/*
 			* MODEL.core.compareSelection
 			* userSelection ():
 			* register and send to compare the user item selection
 			*/
 			MemoryGame.MODEL.core.compareSelection.userSelection (id_);
-		},
-		overHandler:function (obj, evt){
-			UTILITY.addClass (self.border, 'bHover');
-		},
-		outHandler:function (obj, evt){
-			UTILITY.removeClass (self.border, 'bHover');
-		},
-		downHandler:function (obj, evt){
-			UTILITY.addClass (self.border, 'bPress');
-		},
-		upHandler:function (obj, evt){
-			UTILITY.removeClass (self.border, 'bPress');
 		}
 	}
 
@@ -46,14 +54,14 @@ function Ball (id_) {
 	}
 
 	/**/
-	self.enabled  ();
+	self.events('addEventListener');
 }
 /**/
-Ball.prototype.enabled = function () {
-	this.events('addEventListener');
+Ball.prototype.enableAction = function () {
+	this.enableBTN = true; 
 }
-Ball.prototype.disabled = function () {
-	this.events('removeEventListener');
+Ball.prototype.disableAction = function () {
+	this.enableBTN = false; 
 }
 Ball.prototype.circle_id = function () {
 	return Number(this.id);

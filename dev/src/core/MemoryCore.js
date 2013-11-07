@@ -3,12 +3,14 @@ function MemoryCore () {
 	/*
 	* Collecting info
 	*/
+	var self = this;
 	var gameConfigInfo = MemoryGame.MODEL.gameConfiguration;
 	var gameNode = document.getElementById (gameConfigInfo.ballAreaId);
 	var ballCenter = MemoryGame.MODEL.view.ballCenter.ball_arr;
 	var ballCenterLen = ballCenter.length;
 	var interface = MemoryGame.MODEL.view.ballCenter.interface;
 	var rewardRoom = new UserRewardRoom ();
+
 
 	/*
 	* game configuration
@@ -99,13 +101,17 @@ function MemoryCore () {
 		},
 		pausePing:function (){
 			if(pingStatus===2) { 
-				disabledCircles ();
+				/**/
 				pingItem.startPing (); 
+				/**/
+				self.disableCircles();
+				/**/
 				rewardRoom.reward.clear();
 			} else { 
-				enabledCircles ();
 				/**/
 				pingStatus = 2;
+				/**/
+				self.enableCircles(); 
 				/**/
 				clearInterval(pingItem.timer); 
 			};
@@ -136,43 +142,52 @@ function MemoryCore () {
 		* 
 		*/
 		userSelection:function (id_){
+
 			/**/
 			USER_ItemsSelected_arr.push(id_);
 
-			/**/
-			compareSelection.checkIfCorrect ();
+			/*
+			* if user complete the lengt selection of IA array,
+			* this will compare both arr's
+			*/ 
+			if (USER_ItemsSelected_arr.length === IA_ItemsSelected_arr.length) {
+
+				self.disableCircles  ();
+				compareSelection.checkIfCorrect ();
+			}
 		},
 		checkIfCorrect:function (){
 			console.log('checking');
 
 			/* 
-			* if user complete the lengt selection of IA array,
-			* this will compare both arr's
-			*
 			* .compare: Array prototype
 			* declared on UTILITY.prototypeINIT
 			*/
-			if (USER_ItemsSelected_arr.length === IA_ItemsSelected_arr.length) {
+			if(USER_ItemsSelected_arr.compare(IA_ItemsSelected_arr)) {
+ 
+				//
+				levelConfig++
+				rewardRoom.reward.userWin ();
+				//
 
-				if(USER_ItemsSelected_arr.compare(IA_ItemsSelected_arr)) {
-					console.log('equal');
 
-					rewardRoom.reward.userWin ();
 
-					/* delay to reestart () */ 
-					setTimeout(function(){
-						pingItem.pausePing();
-					},delayOnWinReStart);
-					
 
-				} else {
-					console.log('Error');
+				/* delay to reestart () */ 
+				setTimeout(function(){
 
-					compareSelection.clear();
+					pingItem.pausePing();
 
-					rewardRoom.reward.userFail ();
-				}
-			}
+				},delayOnWinReStart);
+				
+
+			} else {
+				console.log('Error');
+
+				compareSelection.clear();
+
+				rewardRoom.reward.userFail ();
+			} 
 		}
 	}
 
@@ -198,13 +213,11 @@ function MemoryCore () {
 		pingItem.clear ();
 		compareSelection.clear ();
 	}
-	function enabledCircles () {
-		console.log("enabled");
-		interface.controlItems.enabledAll ();
+	this.enableCircles = function () {
+		interface.controlItems.enableAll ();
 	} 
-	function disabledCircles () {
-		console.log("disabled");
-		interface.controlItems.enabledAll ();
+	this.disableCircles = function () {
+		interface.controlItems.disableAll ();
 	} 
 	/*****************************************************************************************/
 } 

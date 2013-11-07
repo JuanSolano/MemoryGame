@@ -97,17 +97,19 @@ function BallCenter () {
 	} 
 	/*************************************************************************************************/
 	var controlItems = {
-		enabledAll:function (){
+		enableAll:function (){
+			console.log("All items enable");
 			var len = ball_arr.length;
 			for (var i = 0; i < len; i++) {
-				ball_arr[i].enabled ();
+				ball_arr[i].enableAction ();
 			}
 
 		},
-		disabledAll:function () {
+		disableAll:function () {
+			console.log("All items disable");
 			var len = ball_arr.length;
 			for (var i = 0; i < len; i++) {
-				ball_arr[i].disabled ();
+				ball_arr[i].disableAction ();
 			}
 
 		}

@@ -6,7 +6,7 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/resetHTML5.css">
   <link rel="stylesheet" type="text/css" href="css/memory-game.min.css">
-  <!--link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'-->
+  <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
   <!-- font-family: 'Aladin', cursive; -->
 
   <!-- JS -->
@@ -39,10 +39,16 @@
 <body>
   <!-- CONTENT -->
   <div id="game">
+
     <div id="background">background</div>
-    <div id="trophiesCenter">trophies Center - <a onclick="con()" href="#">continue</a></div>
+    <div id="historyArea">
+
+        <!-- { user levels } -->
+        <p class="level-p">level : <span>1</span></p>
+
+    </div>
     <div id="ballArea"></div>
-    <div id="historyArea">game History</div>
+    <div id="trophiesCenter">trophiesCenter</div>
 
     <!-- HTML internaly defined -->
     <div id="rewardroom"><h1 id="msg">msg</h1></div>

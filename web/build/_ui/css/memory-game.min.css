@@ -1,7 +1,7 @@
 div#game {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 0 auto 0;
   width: 987px;
   height: 570px;
   border: 1px solid #CCCCCC; }
@@ -31,20 +31,31 @@ div#game {
         fill: #A62A2A; }
       div#game #ballArea .circle-btn circle.selected {
         fill: #000000; }
-  div#game #historyArea {
+  div#game #trophiesCenter {
     position: absolute;
     top: 108px;
     left: 568px;
     width: 234px;
     height: 282px;
     border: 1px solid #CCCCCC; }
-  div#game #trophiesCenter {
+  div#game #historyArea {
     position: absolute;
     top: 108px;
     left: 62px;
     width: 140px;
     height: 282px;
-    border: 1px solid #CCCCCC; }
+    border: 1px solid #CCCCCC;
+    /* level complete label*/ }
+    div#game #historyArea p {
+      margin: 0;
+      padding: 3px;
+      background-color: #555555;
+      font-family: 'Aladin', cursive;
+      font-size: 20px;
+      color: #FFF; }
+      div#game #historyArea p span {
+        font-size: 30px;
+        color: #FFFF00; }
   div#game #rewardroom {
     position: absolute;
     top: 10px;
