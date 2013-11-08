@@ -21,7 +21,7 @@
      configuration = {
 
           /* game info areas */
-          ballAreaId:'ballArea',
+          ballAreaId:'ballBox',
           historyAreaId:'historyArea',
           rewardroomId:'rewardroom'
       };
@@ -42,12 +42,25 @@
 
     <div id="background">background</div>
     <div id="historyArea">
-
         <!-- { user levels } -->
-        <p class="level-p">level : <span>1</span></p>
+        <p class="level-p">level <span>1</span></p>
 
     </div>
-    <div id="ballArea"></div>
+    <div id="ballArea">
+
+        <!-- { overlay } -->
+        <div class="boxOverlay">
+            
+          <div class="central-message">
+              <p>GameOver</p>
+          </div>
+
+        </div>
+        
+        <!-- { ball area } -->
+        <div id="ballBox"></div>
+  
+    </div>
     <div id="trophiesCenter">trophiesCenter</div>
 
     <!-- HTML internaly defined -->
