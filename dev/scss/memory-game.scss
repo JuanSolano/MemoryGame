@@ -6,6 +6,8 @@ div#game {
 	width:987px;
 	height:570px;
 
+	font-family: 'Aladin', cursive;
+
 	border:1px solid #CCCCCC;
 
 	#background {
@@ -28,12 +30,50 @@ div#game {
 		top: 108px;
 		left: 208px;
 
-		width:347px;
-		height:267px;
+		width:356px;
+		height:284px;
 
-		padding:15px 0 0 7px; 
+		border:1px solid #ECECFB;
 
-		border:1px solid #CCCCCC;
+		.boxOverlay {
+			position:absolute;
+			top: 0;
+			left: 0;
+
+			width:inherit;
+			height:inherit;
+
+			background-color:#ECECFB;
+
+			opacity:0.8;
+			filter:alpha(opacity=80);
+
+			display: block;
+
+			.central-message {
+				//width: 50%;
+				height: 100px;
+				overflow: auto;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+
+				p {
+
+					vertical-align: center;
+
+					color: #B20000;
+					font-size: 50px;
+					text-align: center;
+
+				}
+			}
+		}
+
+		#ballBox {
+			margin: 16px 0 0 7px;
+		}
+
 
 		.circle-btn {
 			cursor:hand; 
@@ -65,10 +105,12 @@ div#game {
 		top: 108px;
 		left: 568px;
 
+		padding:2px;
+
 		width:234px;
 		height:282px;
 
-		border:1px solid #CCCCCC;
+		background-color:#ECECFB;
 	}
 
 	#historyArea  {
@@ -78,26 +120,25 @@ div#game {
 		top: 108px;
 		left: 62px;
 
+		padding:2px;
+
 		width:140px;
 		height:282px;
 
-		border:1px solid #CCCCCC;
+		background-color:#ECECFB;
 
 		/* level complete label*/
 		p {
 			
-			margin: 0;
-			padding: 3px;
+			padding: 5px;
 			background-color:#555555;
-			 
 
-			font-family: 'Aladin', cursive;
 			font-size: 20px;
-			color: #FFF;
+			color: #FFFF00;
 
 			span {
 				font-size: 30px;
-				color: #FFFF00;
+				color: #FFF;
 			}
 		}
 	}

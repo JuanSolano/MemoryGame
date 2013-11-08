@@ -7,7 +7,7 @@ var MemoryGame = MemoryGame || {};
 	/* DEFAULT game configuration */
 	var defaultGameConfiguration = {
 		gameNodeId:'game',
-		ballAreaId:'ballCenter',
+		ballAreaId:'ballBox',
 		historyAreaId:'historyArea',
 		rewardroomId:'rewardroom',
 		rows:4,
