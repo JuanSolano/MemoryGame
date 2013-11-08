@@ -40,6 +40,7 @@ module.exports = function(grunt) {
 														'dev/src/Model.js',
 
 														// View
+														'dev/src/view/Overlay.js',
 														'dev/src/view/Ball.js',
 														'dev/src/view/BallCenter.js',
 														'dev/src/View.js',

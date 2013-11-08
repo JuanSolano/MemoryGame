@@ -4,8 +4,14 @@ div#game {
   margin: 0 auto 0;
   width: 987px;
   height: 570px;
+  border: 1px solid #CCCCCC;
+  /* GLOBAL */
   font-family: 'Aladin', cursive;
-  border: 1px solid #CCCCCC; }
+  /**/ }
+  div#game a {
+    text-decoration: none; }
+  div#game .hide {
+    visibility: hidden !important; }
   div#game #background {
     position: absolute;
     top: 67px;
@@ -20,7 +26,8 @@ div#game {
     width: 356px;
     height: 284px;
     border: 1px solid #ECECFB; }
-    div#game #ballArea .boxOverlay {
+    div#game #ballArea #boxOverlay {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
@@ -29,21 +36,20 @@ div#game {
       background-color: #ECECFB;
       opacity: 0.8;
       filter: alpha(opacity=80);
-      display: block; }
-      div#game #ballArea .boxOverlay .central-message {
-        height: 100px;
-        overflow: auto;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0; }
-        div#game #ballArea .boxOverlay .central-message p {
-          vertical-align: center;
-          color: #B20000;
-          font-size: 50px;
-          text-align: center; }
+      /* game message control */ }
+      div#game #ballArea #boxOverlay .controlPanel-msg {
+        position: relative;
+        float: left;
+        margin: 0 auto 0;
+        width: inherit;
+        border: 1px solid #AAAAAA; }
+        div#game #ballArea #boxOverlay .controlPanel-msg a {
+          position: relative;
+          float: left;
+          margin: 5px;
+          padding: 3px;
+          color: #8C0000;
+          border: 1px solid #AAAAAA; }
     div#game #ballArea #ballBox {
       margin: 16px 0 0 7px; }
     div#game #ballArea .circle-btn {

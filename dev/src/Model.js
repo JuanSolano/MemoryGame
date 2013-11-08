@@ -22,7 +22,14 @@ MemoryGame.MODEL.view = {
 		
 		/* defined in BallCenter.js */
 		ball_arr:[]
+	},
+
+	overlay:{
+
+		interface:{}
+
 	}
+
 };
 
 /********************************************************************* CORE */

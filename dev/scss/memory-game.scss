@@ -6,9 +6,21 @@ div#game {
 	width:987px;
 	height:570px;
 
+	border:1px solid #CCCCCC;
+
+	/* GLOBAL */
+
 	font-family: 'Aladin', cursive;
 
-	border:1px solid #CCCCCC;
+	a {
+		text-decoration:none;
+	}
+
+	.hide {
+		visibility:hidden!important;
+	}
+
+	/**/
 
 	#background {
 	
@@ -35,7 +47,10 @@ div#game {
 
 		border:1px solid #ECECFB;
 
-		.boxOverlay {
+		#boxOverlay {
+
+			display: block;
+
 			position:absolute;
 			top: 0;
 			left: 0;
@@ -48,32 +63,40 @@ div#game {
 			opacity:0.8;
 			filter:alpha(opacity=80);
 
-			display: block;
+			/* game message control */
+			.controlPanel-msg {
 
-			.central-message {
-				//width: 50%;
-				height: 100px;
-				overflow: auto;
-				margin: auto;
-				position: absolute;
-				top: 0; left: 0; bottom: 0; right: 0;
+				position:relative;
+				float:left;
 
-				p {
+				margin:0 auto 0;
 
-					vertical-align: center;
+				width:inherit;
 
-					color: #B20000;
-					font-size: 50px;
-					text-align: center;
+				border:1px solid #AAAAAA;
+
+				// Start game
+				a {  
+
+					position:relative;
+					float:left;
+
+					margin:5px;
+					padding:3px;
+
+					color:#8C0000;
+
+					border:1px solid #AAAAAA;
 
 				}
 			}
+			
+
 		}
 
 		#ballBox {
 			margin: 16px 0 0 7px;
 		}
-
 
 		.circle-btn {
 			cursor:hand; 

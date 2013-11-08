@@ -18,5 +18,16 @@ function View () {
 
 	/**/
 	MemoryGame.MODEL.view.ballCenter.interface = ballView;
+
+
+	/* CENTER OVERLAY */
+	/*
+		game controls
+	
+	*/
+	var overlay = new Overlay ();
+	/**/
+	MemoryGame.MODEL.view.overlay.interface = overlay;
+
 }
 

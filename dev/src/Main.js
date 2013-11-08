@@ -56,7 +56,7 @@ var MemoryGame = MemoryGame || {};
 		// 
 	MemoryGame.controls = {
 		startGame:function (){
-			memCore.startGame();
+			
 		},
 		stopGame:function (){
 			 

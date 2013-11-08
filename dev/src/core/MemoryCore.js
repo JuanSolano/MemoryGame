@@ -9,7 +9,17 @@ function MemoryCore () {
 	var ballCenter = MemoryGame.MODEL.view.ballCenter.ball_arr;
 	var ballCenterLen = ballCenter.length;
 	var interface = MemoryGame.MODEL.view.ballCenter.interface;
+
+	//
 	var rewardRoom = new UserRewardRoom ();
+
+
+	/*
+		0 = stoped
+		1 = playing
+		2 = paused
+	*/
+	var gameStatus = 0;
 
 
 	/*
@@ -53,12 +63,13 @@ function MemoryCore () {
 
 		},
 		getRandomId:function (){
-			var val=Math.floor(Math.random() * ballCenterLen);
+			var val=Math.floor((Math.random() * ballCenterLen)+1);
 			return val.toString();
 		},
 		startPing:function (){
 
 			/**/
+			gameStatus = 1
 			pingStatus = 1;
 			/**/
 
@@ -100,6 +111,9 @@ function MemoryCore () {
 
 		},
 		pausePing:function (){
+
+			gameStatus=2;
+
 			if(pingStatus===2) { 
 				/**/
 				pingItem.startPing (); 
@@ -118,8 +132,17 @@ function MemoryCore () {
 		},
 		stopPing:function (){
 			/**/
+			gameStatus=0;
 			pingStatus=0;
 			/**/
+		},
+		clear:function (){
+			gameStatus=0;
+			pingStatus=0;
+			this.round=0;
+			clearInterval(pingItem.timer);
+ 
+
 		}
 	};
 
@@ -171,8 +194,6 @@ function MemoryCore () {
 				//
 
 
-
-
 				/* delay to reestart () */ 
 				setTimeout(function(){
 
@@ -184,9 +205,10 @@ function MemoryCore () {
 			} else {
 				console.log('Error');
 
-				compareSelection.clear();
-
 				rewardRoom.reward.userFail ();
+				clearGame ();
+				showOverlay ();
+
 			} 
 		}
 	}
@@ -196,6 +218,8 @@ function MemoryCore () {
 
 	/*****************************************************************************************/
 	this.startGame = function  () {
+
+		rewardRoom.reward.clear();
 
 		if(pingStatus===0) pingItem.startPing ();
 
@@ -207,17 +231,28 @@ function MemoryCore () {
 	this.stopGame = function  () {
 		clearGame ();
 	}
-
-	/*****************************************************************************************/
-	function clearGame () {
-		pingItem.clear ();
-		compareSelection.clear ();
-	}
 	this.enableCircles = function () {
 		interface.controlItems.enableAll ();
 	} 
 	this.disableCircles = function () {
 		interface.controlItems.disableAll ();
 	} 
+	this.gameStatus = function () {
+		return gameStatus;
+	}
+
 	/*****************************************************************************************/
+	function clearGame () {
+		pingItem.clear ();
+		compareSelection.clear ();	
+		//
+		IA_ItemsSelected_arr= [];
+	}
+	function showOverlay (){ 
+		MemoryGame.MODEL.view.overlay.interface.showOverlay('user-loose');
+
+	}
+	/*****************************************************************************************/
+
+	MemoryGame.MODEL.core.obClass = self;
 } 

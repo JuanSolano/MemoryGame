@@ -3,51 +3,46 @@ function UserRewardRoom () {
 	var gameConfigInfo = MemoryGame.MODEL.gameConfiguration;
 	var rewardroomNode = document.getElementById (gameConfigInfo.rewardroomId);
 	var msgNode = document.getElementById ('msg');
-	var userRewardStatus = "";
+	var userRewardStatus;
+	var self = this;
 	
 	/**/
-	reward = {
+	this.reward = {
 		nextLevel:function (){
 
 		},
 		userWin:function (){
 
-			userRewardStatus = 'userWin';
-			reward.assignReward ();
+			self.userRewardStatus = 'userWin';
+			this.assignReward ();
 
 		},
 		userFail:function (){
 
 			
-			userRewardStatus = 'userFail';
-			reward.assignReward ();
+			self.userRewardStatus = 'userFail';
+			this.assignReward ();
 
 		},
 		assignReward:function (){
 
-			UTILITY.addClass (msgNode, userRewardStatus);
+			UTILITY.addClass (msgNode, self.userRewardStatus);
 
 		},
 		clear:function (){
-			
-			UTILITY.removeClass (msgNode, userRewardStatus);
-
+			if(self.userRewardStatus !== undefined){
+				UTILITY.removeClass (msgNode, self.userRewardStatus);
+			}
 		}
-	}
-
+	} 
 
 	/**/
-	messageCentral = {
+	this.messageCentral = {
 		userWinMessages:function () {
 
 		},
 		userFailMessages:function () {
 
 		}
-	}
-
-	/**/
-	return {
-		reward:reward
-	}
+	} 
 }

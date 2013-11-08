@@ -22,6 +22,7 @@
 
           /* game info areas */
           ballAreaId:'ballBox',
+          boxOverlayId:'boxOverlay',
           historyAreaId:'historyArea',
           rewardroomId:'rewardroom'
       };
@@ -49,16 +50,14 @@
     <div id="ballArea">
 
         <!-- { overlay } -->
-        <div class="boxOverlay">
-            
-          <div class="central-message">
-              <p>GameOver</p>
+        <div id="boxOverlay">
+          <div class="controlPanel-msg">
+            <a class="startgame-btn" href="#" title="start game">Start Game</a>
           </div>
-
         </div>
         
         <!-- { ball area } -->
-        <div id="ballBox"></div>
+        <div id="ballBox"> </div>
   
     </div>
     <div id="trophiesCenter">trophiesCenter</div>
