@@ -1,4 +1,0 @@
-MemoryGame
-==========
-
-Javascript - SVG - game

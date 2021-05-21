@@ -1,101 +1,20 @@
-div#game {
-  position: relative;
-  padding: 0;
-  margin: 0 auto 0;
-  width: 987px;
-  height: 570px;
-  border: 1px solid #CCCCCC;
-  /* GLOBAL */
-  font-family: 'Aladin', cursive;
-  /**/ }
-  div#game a {
-    text-decoration: none; }
-  div#game .hide {
-    visibility: hidden !important; }
-  div#game #background {
-    position: absolute;
-    top: 67px;
-    left: 47px;
-    width: 897px;
-    height: 386px;
-    border: 1px solid #CCCCCC; }
-  div#game #ballArea {
-    position: absolute;
-    top: 108px;
-    left: 208px;
-    width: 356px;
-    height: 284px;
-    border: 1px solid #ECECFB; }
-    div#game #ballArea #boxOverlay {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: inherit;
-      height: inherit;
-      background-color: #ECECFB;
-      opacity: 0.8;
-      filter: alpha(opacity=80);
-      /* game message control */ }
-      div#game #ballArea #boxOverlay .controlPanel-msg {
-        position: relative;
-        float: left;
-        margin: 0 auto 0;
-        width: inherit;
-        border: 1px solid #AAAAAA; }
-        div#game #ballArea #boxOverlay .controlPanel-msg a {
-          position: relative;
-          float: left;
-          margin: 5px;
-          padding: 3px;
-          color: #8C0000;
-          border: 1px solid #AAAAAA; }
-    div#game #ballArea #ballBox {
-      margin: 16px 0 0 7px; }
-    div#game #ballArea .circle-btn {
-      cursor: hand;
-      cursor: pointer; }
-      div#game #ballArea .circle-btn circle.border {
-        fill: #E0E0E0; }
-      div#game #ballArea .circle-btn circle.bHover {
-        fill: #7A8B8B; }
-      div#game #ballArea .circle-btn circle.bPress {
-        fill: #A62A2A; }
-      div#game #ballArea .circle-btn circle.selected {
-        fill: #000000; }
-  div#game #trophiesCenter {
-    position: absolute;
-    top: 108px;
-    left: 568px;
-    padding: 2px;
-    width: 234px;
-    height: 282px;
-    background-color: #ECECFB; }
-  div#game #historyArea {
-    position: absolute;
-    top: 108px;
-    left: 62px;
-    padding: 2px;
-    width: 140px;
-    height: 282px;
-    background-color: #ECECFB;
-    /* level complete label*/ }
-    div#game #historyArea p {
-      padding: 5px;
-      background-color: #555555;
-      font-size: 20px;
-      color: #FFFF00; }
-      div#game #historyArea p span {
-        font-size: 30px;
-        color: #FFF; }
-  div#game #rewardroom {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 600px;
-    height: 40px;
-    display: block; }
-    div#game #rewardroom h1.userWin {
-      background-color: #00EACD; }
-    div#game #rewardroom h1.userFail {
-      background-color: #CC3300; }
+/*
+Sass::SyntaxError: Error generating source map: couldn't determine public URL for the source stylesheet.
+  No filename is available so there's nothing for the source map to link to.
+
+
+Backtrace:
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Ruby27-x64/bin/sass:23:in `load'
+C:/Ruby27-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: Error generating source map: couldn't determine public URL for the source stylesheet.\A   No filename is available so there's nothing for the source map to link to.\A "; }
